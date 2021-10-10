@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>8x80</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.0/css/font-awesome.css" integrity="sha512-72McA95q/YhjwmWFMGe8RI3aZIMCTJWPBbV8iQY3jy1z9+bi6+jHnERuNrDPo/WGYEzzNs4WdHNyyEr/yXJ9pA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <script>
+          function ducksearch(){
+            var text = document.getElementById("q").value;
+            window.open("https://www.duckduckgo.com/?q="+text, "_blank");
+          }
+          function googlesearch(){
+            var text = document.getElementById("q").value;
+            window.open("https://www.google.com/search?q="+text, "_blank");
+          }
+          function bingsearch(){
+            var text = document.getElementById("q").value;
+            window.open("https://www.bing.com/search?q="+q.value, "_blank");
+          }
+        </script>
+    </head>
+    <body>
+        <div class="d-flex" id="wrapper">
+            <!-- Sidebar-->
+            <div class="border-end bg-white" id="sidebar-wrapper">
+                <div class="sidebar-heading border-bottom bg-light">8x80
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-eye" viewBox="0 0 16 16">
+                    <path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zM1.173 8a13.133 13.133 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.133 13.133 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5c-2.12 0-3.879-1.168-5.168-2.457A13.134 13.134 0 0 1 1.172 8z"/>
+                    <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z"/>
+                  </svg>
+                  My HomePage
+                </div>
+                <div class="list-group list-group-flush">
+                    <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">Dashboard</a>
+                    <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">Suggestion</a>
+                    <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">Donate</a>
+                    <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">Contact</a>
+                    <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">About</a>
+                </div>
+            </div>
+            <!-- Page content wrapper-->
+            <div id="page-content-wrapper">
+                <!-- Top navigation-->
+                <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+                    <div class="container-fluid">
+                        <button class="btn btn-primary" id="sidebarToggle">&#171;</button>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav ms-auto mt-2 mt-lg-0">
+                                <li class="nav-item active"><a class="nav-link" href="#!">Home</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#!">RandomQuote</a></li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">EasteEggs</a>
+                                    <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                                        <a class="dropdown-item" href="#!">RandomJoke</a>
+                                        <a class="dropdown-item" href="#!">RandomPicture</a>
+                                        <div class="dropdown-divider"></div>
+                                        <a class="dropdown-item" href="#!">LuckyNumbers</a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+
+                <!-- Page content-->
+                <div class="container-fluid">
+                    <h1 class="mt-4">Search with choice </h1>
+                    <div class="input-group mb-3">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon1">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-eye-fill" viewBox="0 0 16 16">
+                            <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z"/>
+                            <path d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z"/>
+                          </svg>
+                          @<i class="fa fa-eye" aria-hidden="true"></i></span>
+                      </div>
+                      <input type="text" class="form-control" placeholder="Search" aria-label="search" aria-describedby="basic-search" id="q">
+                      <button class="btn btn-primary" id="duckduckgo_search" onclick="ducksearch();">DuckDuckGo</button>
+                      <button class="btn btn-warning" id="google_search" onclick="googlesearch();">Google</button>
+                      <button class="btn btn-info" id="bing_search" onclick="bingsearch();">Bing</button>
+                    </div>
+                </div>
+
+
+                            <ul class="list-group list-group-horizontal">
+                                <li class="list-group-item active">SHOPPING</li>
+                                <li class="list-group-item flex-fill"><a href="http://www.amazon.com" target="_blank" class="text-decoration-none">Amazon</a></li>
+                                <li class="list-group-item flex-fill"><a href="http://www.walmart.com" target="_blank" class="text-decoration-none">Walmart</a></li>
+                                <li class="list-group-item flex-fill"><a href="http://www.ebay.com" target="_blank" class="text-decoration-none">Ebay</a></li>
+                                <li class="list-group-item flex-fill"><a href="whttp://ww.AliExpress.com" target="_blank" class="text-decoration-none">AliExpress</a></li>
+                                <li class="list-group-item flex-fill"><a href="http://www.etsy.com" target="_blank" class="text-decoration-none">Etsy</a></li>
+                            </ul>
+                            <ul class="list-group list-group-horizontal">
+                                <li class="list-group-item active">YUMMY</li>
+                                <li class="list-group-item flex-fill"><a href="http://www.doordash.com" target="_blank" class="text-decoration-none">DoorDash</a></li>
+                                <li class="list-group-item flex-fill"><a href="http://www.grubhub.com" target="_blank" class="text-decoration-none">GrubHub</a></li>
+                                <li class="list-group-item flex-fill"><a href="http://www.ubereats.com" target="_blank" class="text-decoration-none">UberEats</a></li>
+                                <li class="list-group-item flex-fill"><a href="http://www.instacart.com" target="_blank" class="text-decoration-none">Instacart</a></li>
+                                <li class="list-group-item flex-fill"><a href="http://www.sayweee.com" target="_blank" class="text-decoration-none">Weee</a></li>
+                            </ul>
+                            <ul class="list-group list-group-horizontal">
+                                <li class="list-group-item active">ENTERTAINMENT</li>
+                                <li class="list-group-item flex-fill"><a href="http://www.tiktok.com" target="_blank" class="text-decoration-none">Tiktok</a></li>
+                                <li class="list-group-item flex-fill"><a href="http://www.instagram.com" target="_blank" class="text-decoration-none">Instagram</a></li>
+                                <!-- <li class="list-group-item flex-fill"><a href="http://www.netflix.com" target="_blank" class="text-decoration-none">Netflix</a></li> -->
+                                <li class="list-group-item flex-fill"><a href="http://www.reddit.com" target="_blank" class="text-decoration-none">Reddit</a></li>
+                                <!-- <li class="list-group-item flex-fill"><a href="http://www.roblox.com" target="_blank" class="text-decoration-none">Roblox</a></li> -->
+                                <!-- <li class="list-group-item flex-fill"><a href="http://www.spotify.com" target="_blank" class="text-decoration-none">Spotify</a></li> -->
+                                <li class="list-group-item flex-fill"><a href="http://www.twitch.tv" target="_blank" class="text-decoration-none">Twitch</a></li>
+                                <li class="list-group-item flex-fill"><a href="http://www.youtube.com" target="_blank" class="text-decoration-none">Youtube</a></li>
+                            </ul>
+                            <ul class="list-group list-group-horizontal">
+                                <li class="list-group-item active">LEARNING</li>
+                                <li class="list-group-item flex-fill"><a href="http://www.coursera.com" target="_blank" class="text-decoration-none">Coursera</a></li>
+                                <li class="list-group-item flex-fill"><a href="http://www.khanacademy.com" target="_blank" class="text-decoration-none">KhanAcademy</a></li>
+                                <li class="list-group-item flex-fill"><a href="http://www.udemy.com" target="_blank" class="text-decoration-none">Udemy</a></li>
+                                <li class="list-group-item flex-fill"><a href="http://www.udacity.com" target="_blank" class="text-decoration-none">Udacity</a></li>
+                                <li class="list-group-item flex-fill"><a href="http://www.edx.org" target="_blank" class="text-decoration-none">EdX</a></li>
+                                <!-- <li class="list-group-item flex-fill"><a href="http://www.skillsahre.com" target="_blank" class="text-decoration-none">Skillshare</a></li>
+                                <li class="list-group-item flex-fill"><a href="http://www.masterclass.com" target="_blank" class="text-decoration-none">MasterClass</a></li> -->
+                            </ul>
+                            <ul class="list-group list-group-horizontal">
+                                <li class="list-group-item active">NEWS</li>
+                                <li class="list-group-item flex-fill"><a href="http://apnews.com" target="_blank" class="text-decoration-none">AP</a></li>
+                                <li class="list-group-item flex-fill"><a href="http://www.reuters.com" target="_blank" class="text-decoration-none">Reuters</a></li>
+                                <li class="list-group-item flex-fill"><a href="http://news.ycombinator.com" target="_blank" class="text-decoration-none">HackerNews</a></li>
+                                <li class="list-group-item flex-fill"><a href="http://www.reddit.com" target="_blank" class="text-decoration-none">Reddit</a></li>
+                                <li class="list-group-item flex-fill"><a href="http://www.businessinsider.com" target="_blank" class="text-decoration-none">BusinessInsider</a></li>
+                            </ul>
+                            <ul class="list-group list-group-horizontal">
+                                <li class="list-group-item active">TRAVEL</li>
+                                <li class="list-group-item flex-fill"><a href="http://www.expedia.com" target="_blank" class="text-decoration-none">Expedia</a></li>
+                                <li class="list-group-item flex-fill"><a href="http://www.airbnb.com" target="_blank" class="text-decoration-none">AirBnB</a></li>
+                                <li class="list-group-item flex-fill"><a href="http://www.ebay.com" target="_blank" class="text-decoration-none">Booking</a></li>
+                                <li class="list-group-item flex-fill"><a href="http://www.princeline.com" target="_blank" class="text-decoration-none">Priceline</a></li>
+                                <li class="list-group-item flex-fill"><a href="https://www.tripadvisor.com/" target="_blank" class="text-decoration-none">TripAdvisor</a></li>
+                            </ul>
+                            <ul class="list-group list-group-horizontal">
+                                <li class="list-group-item active">SERVICES</li>
+                                <li class="list-group-item flex-fill"><a href="http://www.fiverr.com" target="_blank" class="text-decoration-none">Fiverr</a></li>
+                                <li class="list-group-item flex-fill"><a href="http://www.upwork.com" target="_blank" class="text-decoration-none">Upwork</a></li>
+                                <li class="list-group-item flex-fill"><a href="http://www.taskrabbit.com" target="_blank" class="text-decoration-none">TaskRabbit</a></li>
+                                <li class="list-group-item flex-fill"><a href="http://www.yelp.com" target="_blank" class="text-decoration-none">Yelp</a></li>
+                                <li class="list-group-item flex-fill"><a href="https://www.Thumbtack.com/" target="_blank" class="text-decoration-none">Thumbtack</a></li>
+                            </ul>
+                            <ul class="list-group list-group-horizontal">
+                                <li class="list-group-item active">INVESTMENT</li>
+                                <li class="list-group-item flex-fill"><a href="http://finance.yahoo.com" target="_blank" class="text-decoration-none">YahooFinance</a></li>
+                                <li class="list-group-item flex-fill"><a href="http://www.redfin.com" target="_blank" class="text-decoration-none">Redfin</a></li>
+                                <li class="list-group-item flex-fill"><a href="http://www.zillow.com" target="_blank" class="text-decoration-none">Zillow</a></li>
+                                <li class="list-group-item flex-fill"><a href="https://www.fidelity.com/" target="_blank" class="text-decoration-none">Fidelity</a></li>
+                                <li class="list-group-item flex-fill"><a href="http://www.coinbase.com" target="_blank" class="text-decoration-none">Coinbase</a></li>
+                            </ul>
+                            <ul class="list-group list-group-horizontal">
+                                <li class="list-group-item active">OTHERS</li>
+                                <li class="list-group-item flex-fill"><a href="http://www.instructibles.com" target="_blank" class="text-decoration-none">Instructibles</a></li>
+                                <li class="list-group-item flex-fill"><a href="http://www.shopify.com" target="_blank" class="text-decoration-none">Shopify</a></li>
+                                <li class="list-group-item flex-fill"><a href="http://www.monster.com" target="_blank" class="text-decoration-none">HomeDepot</a></li>
+                                <li class="list-group-item flex-fill"><a href="http://www.fast.com" target="_blank" class="text-decoration-none">Fast</a></li>
+                                <li class="list-group-item flex-fill"><a href="http://www.speedtest.net" target="_blank" class="text-decoration-none">Speedtest</a></li>
+                            </ul>
+                            <ul class="list-group list-group-horizontal">
+                                <li class="list-group-item active">JOBS</li>
+                                <li class="list-group-item flex-fill"><a href="http://www.indeed.com" target="_blank" class="text-decoration-none">Indeed</a></li>
+                                <li class="list-group-item flex-fill"><a href="http://www.monster.com" target="_blank" class="text-decoration-none">Monster</a></li>
+                                <li class="list-group-item flex-fill"><a href="http://www.ziprecuiter.com" target="_blank" class="text-decoration-none">ZipRecuiter</a></li>
+                                <li class="list-group-item flex-fill"><a href="http://www.craigslist.com" target="_blank" class="text-decoration-none">Craigslist</a></li>
+                                <li class="list-group-item flex-fill"><a href="http://www.linkedin.com" target="_blank" class="text-decoration-none">LinkedIn</a></li>
+                            </ul>
+
+
+            </div>
+        </div>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+        <script>
+          const node = document.getElementById("q");
+          node.addEventListener("keyup", function(event) {
+              if (event.key === "Enter") {
+                  //default use google
+                 googlesearch();
+              }
+          });
+        </script>
+
+    </body>
+</html>
