@@ -24,13 +24,17 @@
             var text = document.getElementById("q").value;
             window.open("https://www.bing.com/search?q="+q.value, "_blank");
           }
+
+          function randquote(){
+            alert(quote.quote);
+          }
         </script>
     </head>
     <body>
         <div class="d-flex" id="wrapper">
             <!-- Sidebar-->
             <div class="border-end bg-white" id="sidebar-wrapper">
-                <div class="sidebar-heading border-bottom bg-light">8x80
+                <div class="sidebar-heading border-bottom bg-light">AIFinds
                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-eye" viewBox="0 0 16 16">
                     <path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zM1.173 8a13.133 13.133 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.133 13.133 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5c-2.12 0-3.879-1.168-5.168-2.457A13.134 13.134 0 0 1 1.172 8z"/>
                     <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z"/>
@@ -55,7 +59,7 @@
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
                             <ul class="navbar-nav ms-auto mt-2 mt-lg-0">
                                 <li class="nav-item active"><a class="nav-link" href="#!">Home</a></li>
-                                <li class="nav-item"><a class="nav-link" href="#!">RandomQuote</a></li>
+                                <li class="nav-item" onclick="randquote();"><a class="nav-link" href="#!">RandomQuote</a></li>
                                 <li class="nav-item dropdown">
                                     <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">EasteEggs</a>
                                     <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
@@ -72,6 +76,9 @@
 
                 <!-- Page content-->
                 <div class="container-fluid">
+                    <blockquote class="blockquote">
+                      <p id='quote'></p>
+                    </blockquote>
                     <h1 class="mt-4">Search with choice </h1>
                     <div class="input-group mb-3">
                       <div class="input-group-prepend">
@@ -199,6 +206,7 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
+        <script src="http://www.garage10.com/randquotejs"></script>
         <script>
           const node = document.getElementById("q");
           node.addEventListener("keyup", function(event) {
@@ -207,6 +215,9 @@
                  googlesearch();
               }
           });
+
+          document.getElementById("quote").append(quote.quote);
+          //alert(quote.quote);
         </script>
 
     </body>
