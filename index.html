@@ -32,6 +32,10 @@
             var text = document.getElementById("q").value;
             window.open("https://www.twitter.com/search?q="+q.value, "_blank");
           }
+          function youtubesearch(){
+            var text = document.getElementById("q").value;
+            window.open("https://www.youtube.com/results?search_query="+q.value, "_blank");
+          }
 
           function randquote(){
             alert(quote.quote);
@@ -109,8 +113,9 @@
                       <button class="btn btn-primary" id="duckduckgo_search" onclick="ducksearch();">Duck</button>
                       <button class="btn btn-warning" id="google_search" onclick="googlesearch();">Google</button>
                       <button class="btn btn-success" id="bing_search" onclick="bingsearch();">Bing</button>
-                      <button class="btn btn-info" id="bing_search" onclick="redditsearch();">Reddit</button>
-                      <button class="btn btn-danger" id="bing_search" onclick="twittersearch();">Twitter</button>
+                      <button class="btn btn-info" id="reddit_search" onclick="redditsearch();">Reddit</button>
+                      <button class="btn btn-danger" id="twitter_search" onclick="twittersearch();">Twitter</button>
+                      <button class="btn btn-secondary" id="youtube_search" onclick="youtubesearch();">YTube</button>
                     </div>
                 </div>
 
@@ -140,11 +145,13 @@
                             </tr>
                             <tr>
                               <td><b>DEALS</b></td>
+                              <td><a href="http://www.retailmenot.com" target="_blank" class="text-decoration-none">RetailMeNot</a></td>
+                              <td><a href="http://www.coupons.com" target="_blank" class="text-decoration-none">Coupons</a></td>
                               <td><a href="http://www.groupon.com" target="_blank" class="text-decoration-none">Groupon</a></td>
                               <td><a href="http://www.livingsocial.com" target="_blank" class="text-decoration-none">LivingSocial</a></td>
                               <td><a href="http://www.slickdeals.net" target="_blank" class="text-decoration-none">SlickDeals</a></td>
-                              <td><a href="http://www.dealnews.com" target="_blank" class="text-decoration-none">DealNews</a></td>
-                              <td><a href="http://www.techbargains.com" target="_blank" class="text-decoration-none">Techbargains</a></td>
+                              <!-- <td><a href="http://www.dealnews.com" target="_blank" class="text-decoration-none">DealNews</a></td> -->
+                              <!-- <td><a href="http://www.techbargains.com" target="_blank" class="text-decoration-none">Techbargains</a></td> -->
                           </tr>
                             <tr>
                                 <td><b>FUN</b></td>
