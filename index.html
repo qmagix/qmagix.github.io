@@ -37,6 +37,13 @@
             alert(quote.quote);
           }
         </script>
+        <style>
+          @media (max-width: 900px) {
+            table.alllists{
+              font-size: 8pt;
+            }
+          }
+        </style>
     </head>
     <body>
         <div class="d-flex" id="wrapper">
@@ -95,9 +102,10 @@
                             <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z"/>
                             <path d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z"/>
                           </svg>
-                          @<i class="fa fa-eye" aria-hidden="true"></i></span>
+                          @
+                          <i class="fa fa-eye" aria-hidden="true"></i></span>
                       </div>
-                      <input type="text" class="form-control" placeholder="Search" aria-label="search" aria-describedby="basic-search" id="q">
+                      <input type="text" class="form-control" style="min-width: 280px" placeholder="Search" aria-label="search" aria-describedby="basic-search" id="q">
                       <button class="btn btn-primary" id="duckduckgo_search" onclick="ducksearch();">Duck</button>
                       <button class="btn btn-warning" id="google_search" onclick="googlesearch();">Google</button>
                       <button class="btn btn-success" id="bing_search" onclick="bingsearch();">Bing</button>
@@ -106,7 +114,7 @@
                     </div>
                 </div>
 
-                    <table class="table table-light">
+                    <table class="table table-light alllists">
                         <thead class="thead-light">
                             <tr>
                                 <th>#</th>
@@ -115,7 +123,7 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td><b>SHOPPING</b></td>
+                                <td><b>BUY</b></td>
                                 <td><a href="http://www.amazon.com" target="_blank" class="text-decoration-none">Amazon</a></td>
                                 <td><a href="http://www.walmart.com" target="_blank" class="text-decoration-none">Walmart</a></td>
                                 <td><a href="http://www.ebay.com" target="_blank" class="text-decoration-none">Ebay</a></td>
@@ -123,7 +131,7 @@
                                 <td><a href="http://www.etsy.com" target="_blank" class="text-decoration-none">Etsy</a></td>
                             </tr>
                             <tr>
-                                <td><b>YUMMY</b></td>
+                                <td><b>EAT</b></td>
                                 <td><a href="http://www.doordash.com" target="_blank" class="text-decoration-none">DoorDash</a></td>
                                 <td><a href="http://www.grubhub.com" target="_blank" class="text-decoration-none">GrubHub</a></td>
                                 <td><a href="http://www.ubereats.com" target="_blank" class="text-decoration-none">UberEats</a></td>
@@ -139,7 +147,7 @@
                               <td><a href="http://www.techbargains.com" target="_blank" class="text-decoration-none">Techbargains</a></td>
                           </tr>
                             <tr>
-                                <td><b>ENTERTAINMENT</b></td>
+                                <td><b>FUN</b></td>
                                 <td><a href="http://www.tiktok.com" target="_blank" class="text-decoration-none">Tiktok</a></td>
                                 <td><a href="http://www.instagram.com" target="_blank" class="text-decoration-none">Instagram</a></td>
                                 <!-- <td><a href="http://www.netflix.com" target="_blank" class="text-decoration-none">Netflix</a></td> -->
@@ -150,7 +158,7 @@
                                 <td><a href="http://www.youtube.com" target="_blank" class="text-decoration-none">Youtube</a></td>
                             </tr>
                             <tr>
-                                <td><b>LEARNING</b></td>
+                                <td><b>LEARN</b></td>
                                 <td><a href="http://www.coursera.com" target="_blank" class="text-decoration-none">Coursera</a></td>
                                 <td><a href="http://www.khanacademy.com" target="_blank" class="text-decoration-none">KhanAcademy</a></td>
                                 <td><a href="http://www.udemy.com" target="_blank" class="text-decoration-none">Udemy</a></td>
@@ -165,7 +173,7 @@
                                 <td><a href="http://www.reuters.com" target="_blank" class="text-decoration-none">Reuters</a></td>
                                 <td><a href="http://news.ycombinator.com" target="_blank" class="text-decoration-none">HackerNews</a></td>
                                 <td><a href="http://www.reddit.com" target="_blank" class="text-decoration-none">Reddit</a></td>
-                                <td><a href="http://www.businessinsider.com" target="_blank" class="text-decoration-none">BusinessInsider</a></td>
+                                <td><a href="http://www.businessinsider.com" target="_blank" class="text-decoration-none">B Insider</a></td>
                             </tr>
                             <tr>
                                 <td><b>TRAVEL</b></td>
@@ -176,7 +184,7 @@
                                 <td><a href="https://www.tripadvisor.com/" target="_blank" class="text-decoration-none">TripAdvisor</a></td>
                             </tr>
                             <tr>
-                                <td><b>SERVICES</b></td>
+                                <td><b>HELP</b></td>
                                 <td><a href="http://www.fiverr.com" target="_blank" class="text-decoration-none">Fiverr</a></td>
                                 <td><a href="http://www.upwork.com" target="_blank" class="text-decoration-none">Upwork</a></td>
                                 <td><a href="http://www.taskrabbit.com" target="_blank" class="text-decoration-none">TaskRabbit</a></td>
@@ -184,15 +192,15 @@
                                 <td><a href="https://www.Thumbtack.com/" target="_blank" class="text-decoration-none">Thumbtack</a></td>
                             </tr>
                             <tr>
-                                <td><b>INVESTMENT</b></td>
-                                <td><a href="http://finance.yahoo.com" target="_blank" class="text-decoration-none">YahooFinance</a></td>
-                                <td><a href="https://www.schwab.com/" target="_blank" class="text-decoration-none">CharlesSchwab</a></td>
+                                <td><b>MONEY</b></td>
+                                <td><a href="http://finance.yahoo.com" target="_blank" class="text-decoration-none">YFinance</a></td>
+                                <td><a href="https://www.schwab.com/" target="_blank" class="text-decoration-none">C Schwab</a></td>
                                 <td><a href="https://www.fidelity.com/" target="_blank" class="text-decoration-none">Fidelity</a></td>
                                 <td><a href="http://www.tastyworks.com" target="_blank" class="text-decoration-none">TastyWorks</a></td>
                                 <td><a href="http://www.coinbase.com" target="_blank" class="text-decoration-none">Coinbase</a></td>
                             </tr>
                             <tr>
-                                <td><b>REAL ESTATE</b></td>
+                                <td><b>HOUSE</b></td>
                                 <td><a href="http://www.trulia.com" target="_blank" class="text-decoration-none">Trulia</a></td>
                                 <td><a href="http://www.redfin.com" target="_blank" class="text-decoration-none">Redfin</a></td>
                                 <td><a href="http://www.zillow.com" target="_blank" class="text-decoration-none">Zillow</a></td>

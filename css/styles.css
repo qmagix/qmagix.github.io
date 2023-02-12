@@ -557,6 +557,8 @@ progress {
   }
 }
 
+
+
 .list-unstyled {
   padding-left: 0;
   list-style: none;
@@ -652,6 +654,9 @@ progress {
 @media (min-width: 992px) {
   .container-lg, .container-md, .container-sm, .container {
     max-width: 960px;
+  }
+  b{
+    font-size:1rem;
   }
 }
 @media (min-width: 1200px) {
@@ -11313,4 +11318,6 @@ body.sb-sidenav-toggled #wrapper #sidebar-wrapper {
   body.sb-sidenav-toggled #wrapper #sidebar-wrapper {
     margin-left: -15rem;
   }
+
+
 }
