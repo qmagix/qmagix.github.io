@@ -24,6 +24,14 @@
             var text = document.getElementById("q").value;
             window.open("https://www.bing.com/search?q="+q.value, "_blank");
           }
+          function redditsearch(){
+            var text = document.getElementById("q").value;
+            window.open("https://www.reddit.com/search?q="+q.value, "_blank");
+          }
+          function twittersearch(){
+            var text = document.getElementById("q").value;
+            window.open("https://www.twitter.com/search?q="+q.value, "_blank");
+          }
 
           function randquote(){
             alert(quote.quote);
@@ -90,9 +98,11 @@
                           @<i class="fa fa-eye" aria-hidden="true"></i></span>
                       </div>
                       <input type="text" class="form-control" placeholder="Search" aria-label="search" aria-describedby="basic-search" id="q">
-                      <button class="btn btn-primary" id="duckduckgo_search" onclick="ducksearch();">DuckDuckGo</button>
+                      <button class="btn btn-primary" id="duckduckgo_search" onclick="ducksearch();">Duck</button>
                       <button class="btn btn-warning" id="google_search" onclick="googlesearch();">Google</button>
-                      <button class="btn btn-info" id="bing_search" onclick="bingsearch();">Bing</button>
+                      <button class="btn btn-success" id="bing_search" onclick="bingsearch();">Bing</button>
+                      <button class="btn btn-info" id="bing_search" onclick="redditsearch();">Reddit</button>
+                      <button class="btn btn-danger" id="bing_search" onclick="twittersearch();">Twitter</button>
                     </div>
                 </div>
 
