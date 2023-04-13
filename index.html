@@ -12,6 +12,10 @@
         <link href="css/styles.css" rel="stylesheet" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.0/css/font-awesome.css" integrity="sha512-72McA95q/YhjwmWFMGe8RI3aZIMCTJWPBbV8iQY3jy1z9+bi6+jHnERuNrDPo/WGYEzzNs4WdHNyyEr/yXJ9pA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <script>
+          function phindsearch(){
+            var text = document.getElementById("q").value;
+            window.open("https://www.phind.com/search?q="+text, "_blank");
+          }
           function ducksearch(){
             var text = document.getElementById("q").value;
             window.open("https://www.duckduckgo.com/?q="+text, "_blank");
@@ -110,6 +114,7 @@
                           <i class="fa fa-eye" aria-hidden="true"></i></span>
                       </div>
                       <input type="text" class="form-control" style="min-width: 280px" placeholder="Search" aria-label="search" aria-describedby="basic-search" id="q">
+                      <button class="btn btn-primary" id="phind_search" onclick="phindsearch();">Phind</button>
                       <button class="btn btn-primary" id="duckduckgo_search" onclick="ducksearch();">Duck</button>
                       <button class="btn btn-warning" id="google_search" onclick="googlesearch();">Google</button>
                       <button class="btn btn-success" id="bing_search" onclick="bingsearch();">Bing</button>
