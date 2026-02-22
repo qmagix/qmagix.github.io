@@ -101,10 +101,6 @@ Add a new `<tr>` inside the `<tbody>` of the main table:
 The sidebar uses Bootstrap's offcanvas-style toggle pattern from the Simple Sidebar template. Sidebar items currently link to `#!` (placeholder/non-functional).
 
 ## Known Issues
-- Some search functions use `q.value` (global element reference) instead of the local `text` variable - inconsistent but functional in most browsers
-- The `list.html` AliExpress link has a malformed URL (`whttp://ww.AliExpress.com`)
-- The TRAVEL category Booking link incorrectly points to `ebay.com` in both pages
-- The OTHERS category HomeDepot link points to `monster.com`
 - Sidebar nav items (`Dashboard`, `Suggestion`, `Donate`, `Contact`, `About`) are non-functional placeholders (`#!`)
 
 ## Branch Strategy
