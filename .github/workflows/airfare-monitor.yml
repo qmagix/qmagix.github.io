@@ -1,0 +1,66 @@
+name: Airfare monitor (SFO -> PVG)
+
+on:
+  schedule:
+    # 14:00 UTC daily ~= 07:00 PT. GitHub may delay scheduled runs under load.
+    - cron: "0 14 * * *"
+  workflow_dispatch:
+    inputs:
+      drop_pct_threshold:
+        description: "Drop percentage threshold (e.g. 0.15 for 15%)"
+        required: false
+        default: "0.15"
+      drop_abs_threshold:
+        description: "Drop absolute USD threshold (e.g. 300)"
+        required: false
+        default: "300"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: airfare-monitor
+  cancel-in-progress: false
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Run airfare check
+        env:
+          AMADEUS_CLIENT_ID: ${{ secrets.AMADEUS_CLIENT_ID }}
+          AMADEUS_CLIENT_SECRET: ${{ secrets.AMADEUS_CLIENT_SECRET }}
+          AMADEUS_HOST: ${{ vars.AMADEUS_HOST || 'https://test.api.amadeus.com' }}
+          DROP_PCT_THRESHOLD: ${{ inputs.drop_pct_threshold || '0.15' }}
+          DROP_ABS_THRESHOLD: ${{ inputs.drop_abs_threshold || '300' }}
+          SMTP_HOST: ${{ secrets.SMTP_HOST }}
+          SMTP_PORT: ${{ secrets.SMTP_PORT }}
+          SMTP_USER: ${{ secrets.SMTP_USER }}
+          SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
+          SMTP_FROM: ${{ secrets.SMTP_FROM }}
+          ALERT_EMAIL_TO: ${{ vars.ALERT_EMAIL_TO || 'huangq@gmail.com' }}
+          TWILIO_ACCOUNT_SID: ${{ secrets.TWILIO_ACCOUNT_SID }}
+          TWILIO_AUTH_TOKEN: ${{ secrets.TWILIO_AUTH_TOKEN }}
+          TWILIO_FROM_NUMBER: ${{ secrets.TWILIO_FROM_NUMBER }}
+          ALERT_SMS_TO: ${{ vars.ALERT_SMS_TO || '+14082193562' }}
+        run: python tools/airfare-monitor/check_fares.py
+
+      - name: Commit updated price history
+        run: |
+          if [ -n "$(git status --porcelain tools/airfare-monitor/price_history.json)" ]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add tools/airfare-monitor/price_history.json
+            git commit -m "chore(airfare): update price history"
+            git push
+          else
+            echo "No price history changes to commit."
+          fi
